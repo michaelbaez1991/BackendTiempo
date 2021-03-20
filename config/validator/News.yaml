@@ -1,0 +1,7 @@
+App\Entity\News:
+    properties:
+        title:
+            - NotBlank: ~
+        content:
+          - NotBlank: ~
+            
