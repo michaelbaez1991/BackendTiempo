@@ -13,7 +13,7 @@ class NewManager {
         $this->newRepository = $newRepository;
     }
 
-    public function find(int $id): ?News {
+    public function find(int $id): ? News {
         return $this->newRepository->find($id);
     }
 
