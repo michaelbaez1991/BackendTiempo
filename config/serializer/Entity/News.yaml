@@ -1,0 +1,6 @@
+App\Form\Model\NewsDto:
+  properties:
+    title:
+      - NotBlank: ~
+    content:
+      - NotBlank: ~
