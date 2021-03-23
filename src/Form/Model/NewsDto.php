@@ -7,7 +7,7 @@ use App\Entity\News;
 class NewsDto {
     public $title;
     public $content;
-
+    public $published;
 
     public static function createFromNew(News $new): self {
         $dto = new self();
@@ -26,7 +26,7 @@ class NewsDto {
         return $this->content;
     }
     
-    public function getPublished(): ?string {
+    public function getPublished(): ?bool {
         return $this->published;
     }
 }

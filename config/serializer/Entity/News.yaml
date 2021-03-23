@@ -6,3 +6,5 @@ App\Entity\News:
       groups: ['news']
     content:
       groups: ['news']
+    published:
+      groups: ['news']

@@ -85,6 +85,7 @@ class NewsApiController extends AbstractFOSRestController {
         if ($form->isSubmitted() && $form->isValid()) {
             $new->setTitle($newsDto->title);
             $new->setContent($newsDto->content);
+            $new->setPublished($newsDto->published);
                 
             $em->persist($new);
             $em->flush();

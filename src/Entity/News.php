@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\NewsRepository;
 use Doctrine\ORM\Mapping as ORM;
-use phpDocumentor\Reflection\Types\Boolean;
 
 /**
  * @ORM\Entity(repositoryClass=NewsRepository::class)
@@ -62,12 +61,12 @@ class News
         return $this;
     }
 
-    public function getPublished(): ?boolean
+    public function getPublished(): ?bool
     {
         return $this->published;
     }
 
-    public function setPublished(?boolean $published): self
+    public function setPublished(?bool $published): self
     {
         $this->published = $published;
 
