@@ -1,8 +1,0 @@
-App\Entity\News:
-  attributes:
-    id:
-      groups: ['news']
-    title:
-      groups: ['news']
-    content:
-      groups: ['news']
