@@ -4,3 +4,5 @@ App\Form\Model\NewsDto:
       - NotBlank: ~
     content:
       - NotBlank: ~
+    published:
+      - NotBlank: ~

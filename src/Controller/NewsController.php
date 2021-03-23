@@ -31,7 +31,7 @@ class NewsController extends AbstractController {
                 'id' => $new->getId(),
                 'title' => $new->getTitle(),
                 'content' => $new->getContent(),
-                'image' => $new->getImage()
+                'published' => $new->getPublished()
             ];
         }
 

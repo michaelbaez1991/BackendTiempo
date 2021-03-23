@@ -29,7 +29,7 @@ class NewsApiController extends AbstractFOSRestController {
                 'id' => $new->getId(),
                 'title' => $new->getTitle(),
                 'content' => $new->getContent(),
-                'image' => $new->getImage()
+                'published' => $new->getPublished()
             ];
         }
 
@@ -52,6 +52,7 @@ class NewsApiController extends AbstractFOSRestController {
             $new = new News();
             $new->setTitle($newsDto->title);
             $new->setContent($newsDto->content);
+            $new->setPublished($newsDto->published);
             $em->persist($new);
             $em->flush();
 
@@ -112,7 +113,7 @@ class NewsApiController extends AbstractFOSRestController {
             'id' => $new->getId(),
             'title' => $new->getTitle(),
             'content' => $new->getContent(),
-            'image' => $new->getImage()
+            'published' => $new->getPublished()
         ];
 
         $response = new JsonResponse();

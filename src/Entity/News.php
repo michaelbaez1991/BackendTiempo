@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\NewsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use phpDocumentor\Reflection\Types\Boolean;
 
 /**
  * @ORM\Entity(repositoryClass=NewsRepository::class)
@@ -28,9 +29,9 @@ class News
     private $content;
 
     /**
-     * @ORM\Column(type="string", length=512, nullable=true)
+     * @ORM\Column(type="boolean", nullable=false)
      */
-    private $image;
+    private $published;
 
     public function getId(): ?int
     {
@@ -61,14 +62,14 @@ class News
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getPublished(): ?boolean
     {
-        return $this->image;
+        return $this->published;
     }
 
-    public function setImage(?string $image): self
+    public function setPublished(?boolean $published): self
     {
-        $this->image = $image;
+        $this->published = $published;
 
         return $this;
     }

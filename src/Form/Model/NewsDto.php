@@ -13,6 +13,7 @@ class NewsDto {
         $dto = new self();
         $dto->title = $new->getTitle();
         $dto->content = $new->getContent();
+        $dto->published = $new->getPublished();
 
         return $dto;
     }
@@ -23,5 +24,9 @@ class NewsDto {
 
     public function getContent(): ?string {
         return $this->content;
+    }
+    
+    public function getPublished(): ?string {
+        return $this->published;
     }
 }
