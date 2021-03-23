@@ -1,8 +1,8 @@
-App\Form\Model\NewsDto:
-  properties:
+App\Entity\News:
+  attributes:
+    id:
+      groups: ['news']
     title:
-      - NotBlank: ~
+      groups: ['news']
     content:
-      - NotBlank: ~
-    published:
-      - NotBlank: ~
+      groups: ['news']
